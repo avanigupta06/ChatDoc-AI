@@ -61,7 +61,7 @@ If you want to run your own copy of this project:
 2. **Clone Your Fork**
    ```bash
    git clone https://github.com/<your-github-username>/ChatDoc-AI.git
-   cd conversational-rag
+   cd ChatDoc-AI
    ```
 
 
