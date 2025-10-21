@@ -119,6 +119,11 @@ You can input the **Groq API Key** directly in the Streamlit interface when prom
 - **Chat Memory** → Conversation history is maintained per session for contextual continuity.
 
 ---
+## 📸 Screenshots
+![1](screenshots/1.png)
+![2](screenshots/2.png)
+
+---
 
 If you find this project useful, please **⭐ star** this repository on GitHub!
 
