@@ -55,7 +55,7 @@ If you want to run your own copy of this project:
 
 1. **Fork the Repository**
    - Go to the GitHub repository:  
-     👉 [https://github.com/<your-username>/ChatDoc-AI](https://github.com/<your-username>/ChatDoc-AI)
+     👉 [https://github.com/avanigupta06/ChatDoc-AI](https://github.com/avanigupta06/ChatDoc-AI)
    - Click the **“Fork”** button (top-right corner) to create your own copy.
 
 2. **Clone Your Fork**
