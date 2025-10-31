@@ -31,6 +31,12 @@ if GROQ_API_KEY:
 
     uploaded_files = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
 
+    @st.cache_resource
+    def load_embeddings():
+        return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2", model_kwargs={"device": "cpu"})
+
+    embeddings = load_embeddings()
+
     if uploaded_files:
         documents = []
         for uploaded_file in uploaded_files:
@@ -41,11 +47,11 @@ if GROQ_API_KEY:
             docs = loader.load()
             documents.extend(docs)
 
-        # Split & embed
+        # Split documents
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=5000, chunk_overlap=500)
         splits = text_splitter.split_documents(documents)
 
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        # Create vector store
         vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings)
         retriever = vectorstore.as_retriever()
 
