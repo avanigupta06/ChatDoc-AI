@@ -33,14 +33,14 @@ It maintains **chat history**, reformulates follow-up questions contextually, an
 ---
 
 ## 🧱 Project Structure
-
+```bash
 📦 Conversational-RAG
 │
 ├── app.py # Main Streamlit app
 ├── requirements.txt # Dependencies
 ├── .env # Environment variables (HF_TOKEN)
 └── README.md # Project documentation
-
+```
 ---
 
 
